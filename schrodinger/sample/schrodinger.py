@@ -212,9 +212,7 @@ V0 = 1.5
 L = hbar / np.sqrt(2 * m * V0)
 a = 3 * L
 x0 = -60 * L
-V_x = square_barrier(x, a, V0)
-V_x[x < -98] = 1E6
-V_x[x > 98] = 1E6
+V_x = x*x/(N*N)*1e4
 
 # specify initial momentum and quantities derived from it
 p0 = np.sqrt(2 * m * 0.2 * V0)
